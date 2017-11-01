@@ -2,8 +2,8 @@
 
 from sqlalchemy import func
 from model import User
-# from model import Rating
-# from model import Movie
+from model import Rating
+from model import Movie
 
 from model import connect_to_db, db
 from server import app
@@ -55,7 +55,7 @@ def load_movies():
         else:
             release_date = None
 
-        movie_title = movie_title[:-7]
+        movie_title = title[:-7]
 
         movie = Movie(movie_id=movie_id,
                         title=movie_title,
