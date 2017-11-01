@@ -1,4 +1,4 @@
-"""Models and database functions for Ratings project."""
+"""Models and database functions for The Criticizer."""
 
 from flask_sqlalchemy import SQLAlchemy
 
@@ -24,16 +24,16 @@ class User(db.Model):
     zipcode = db.Column(db.String(15), nullable=True)
 
 
-# Put your Movie and Rating model classes here.
+# Put Movie and Rating model classes here.
 
 
 ##############################################################################
 # Helper functions
 
 def connect_to_db(app):
-    """Connect the database to our Flask app."""
+    """Connect the database to Flask app."""
 
-    # Configure to use our PstgreSQL database
+    # Configure to use PstgreSQL database
     app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql:///ratings'
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     db.app = app
